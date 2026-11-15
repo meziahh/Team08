@@ -6,6 +6,12 @@ body
     width: 100%;
 }
 
+html, body
+{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 .nasa-body header
 {
     background-color: #0b3d91;
@@ -318,7 +324,7 @@ ul
     font-size: 1.8rem;         
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition: opacity 1.5s ease, transform 1.5s ease;
     min-width: 0; 
 }
 
@@ -335,14 +341,134 @@ ul
     width: clamp(20rem,40vw, 30rem);
 }
 
+.buggy15
+{
+    display: block;
+    margin: 0 auto;
+    width: clamp(20rem,40vw, 30rem);
+}
+
+
 #MBhi2
 {
     color: white;
     font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
     margin-top: 0;
-    padding-bottom: 10rem;
+    padding-bottom: 7rem;
+    margin-bottom: 0;
 }
+
+.story1
+{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.stories
+{
+    color: white;
+    font-size: clamp(1rem, 3vw, 2rem);
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 7rem;
+    margin-bottom: 0;
+    
+}
+
+.center-story
+{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+#pic15-1
+{
+    width: clamp(20rem, 40vw, 30rem);
+    height: auto;
+    margin-right: 4rem;
+}
+
+#story15-2
+{
+    margin-left: 4rem;
+    margin-right: 2rem;
+}
+
+.pics-15
+{
+    border-radius: 30px;
+}
+
+#story15-7
+{
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.story1 > .stories:only-child
+{
+    flex: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20vh 0;                      /* the gap: 15vh above + 15vh below */
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+#back-to-top
+{
+    position: fixed;
+    right:0;
+    margin-right: 4rem;
+    bottom: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #0b3d91;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+}
+
+#back-to-top.show
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover
+{
+    background-color: #084298;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Apollo 16 page */
@@ -406,6 +532,26 @@ ul
     margin: 0 auto;
     width: clamp(20rem,40vw, 30rem);
 }
+
+.coming-soon
+{
+    background-color: black;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vw;
+}
+
+.title-soon
+{
+    margin-bottom: 10rem;
+}
+
+
+
+
 
 
 /* Apollo 17 page */
@@ -611,7 +757,7 @@ ul
         background-color:hsl(246, 100%, 48%);
         flex-direction: column;
         padding: 1rem 0;
-        z-index: 1000;
+        z-index: 10000;
         font-size: clamp(2rem, 6vw, 3rem);
         align-items: center;
     }
@@ -633,11 +779,195 @@ ul
     {
         display: flex;
     }
+
+     .home
+    {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 3rem;
+    }
+
+    #welcome
+    {
+        font-size: clamp(2.5rem, 13vw, 4rem);
+        padding: 1rem;
+    }
+
+    .center
+    {
+        flex-direction: column;
+        padding-right: 0;
+        gap: 1.5rem;
+    }
+
+    #opening
+    {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        font-size: clamp(1.4rem, 5vw, 2rem);
+    }
+
+    .frame
+    {
+        flex: 0 0 auto;
+        width: 80vw;
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    #line1
+    {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        margin: 0 1rem;
+        text-align: center;
+    }
+
+    #introduce
+    {
+        margin-top: 8vw;
+    }
+
+    .cards
+    {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 3rem 1.5rem 0;
+    }
+
+    .card
+    {
+        margin-right: 0;
+    }
+
+    #button2
+    {
+        margin-top: 0;
+    }
+
+    /* ---- APOLLO PAGES: banner + title ---- */
+    #apollo15-pic,
+    #apollo16-pic,
+    #apollo17-pic
+    {
+        height: 75vw;
+    }
+
+    #title-A15,
+    #title-A16,
+    #title-A17
+    {
+        top: 40vw;
+        left: 50%;
+        margin-top: 0;
+        width: 90%;
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+
+    #title2,
+    #title16,
+    #title17
+    {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    #MBhi
+    {
+        margin-top: 3rem;
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    #MBhi2
+    {
+        padding-bottom: 3rem;
+    }
+
+    /* ---- APOLLO PAGES: story blocks ---- */
+    .story1
+    {
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+
+    .center-story
+    {
+        padding-top: 3rem;
+    }
+
+    .stories
+    {
+        padding: 0 1.5rem 3rem;
+        box-sizing: border-box;
+    }
+
+    .story1 > .stories:only-child
+    {
+        padding: 10vh 1.5rem;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    #story15-2,
+    #story15-7
+    {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    #story15-7
+    {
+        margin-top: 3rem;
+    }
+
+    #buggy15,
+    .buggy15,
+    #buggy16,
+    #buggy17
+    {
+        width: min(70vw, 20rem);
+    }
+
+    #pic15-1
+    {
+        width: min(70vw, 20rem);
+        margin-right: 0;
+    }
+
+    .coming-soon
+    {
+        height: auto;
+        min-height: 60vh;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .title-soon
+    {
+        margin-bottom: 3rem;
+    }
+
+    /* ---- BACK TO TOP + FOOTER ---- */
+    #back-to-top
+    {
+        margin-right: 1rem;
+    }
+
+    .footer
+    {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .footer-col
+    {
+        flex: 1 1 100%;
+    }
+
 }
 
 
 /*responsive: for tablets or ipads or book vertical */
-@media only screen and (min-width: 768px) and (max-width: 1400px)
+@media only screen and (min-width: 768px) and (max-width: 1024px)
 {
     html, body
     {
@@ -659,5 +989,123 @@ ul
     .nav-menu
     {
         display: flex;
+    }
+
+     .home
+    {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 3rem;
+    }
+
+    #welcome
+    {
+        font-size: 4.5rem;
+    }
+
+    #opening
+    {
+        width: 55%;
+        box-sizing: border-box;
+    }
+
+    .frame
+    {
+        flex: 0 0 40vw;
+        max-width: 40vw;
+    }
+
+    .cards
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 6vw 2rem 0;
+    }
+
+    .card
+    {
+        margin-right: 0;
+    }
+
+    #button2
+    {
+        margin-top: 0;
+    }
+
+    /* ---- HEADER ---- */
+    .nav-menu
+    {
+        gap: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    .nav-menu ul
+    {
+        gap: 1rem;
+    }
+
+    #title
+    {
+        padding: 10px;
+    }
+
+    /* ---- APOLLO PAGES ---- */
+    #apollo15-pic,
+    #apollo16-pic,
+    #apollo17-pic
+    {
+        height: 50vw;
+    }
+
+    #title-A15,
+    #title-A16,
+    #title-A17
+    {
+        top: 25vw;
+        left: 50%;
+        margin-top: 0;
+        width: 80%;
+    }
+
+    #MBhi
+    {
+        margin-top: 5rem;
+    }
+
+    .stories
+    {
+        padding-bottom: 4rem;
+        box-sizing: border-box;
+    }
+
+    #story15-2
+    {
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+    #story15-7
+    {
+        margin: 5rem 3rem 0;
+    }
+
+    #buggy15,
+    .buggy15,
+    #buggy16,
+    #buggy17
+    {
+        width: 35vw;
+    }
+
+    #pic15-1
+    {
+        width: 35vw;
+        margin-right: 2rem;
+    }
+
+    .story1 > .stories:only-child
+    {
+        padding: 15vh 2rem;
+        box-sizing: border-box;
     }
 }
