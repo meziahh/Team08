@@ -1,0 +1,663 @@
+/* whole body: unified font */
+body
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.nasa-body header
+{
+    background-color: #0b3d91;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header
+{
+    background-color: transparent;
+    color: #0b3d91;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+
+
+#logo
+{
+    width: clamp(2rem, 5vw, 4rem);
+    height: auto;
+    margin-left: 1rem;
+    margin-top: clamp(0.1rem, 1vw, 1rem);
+    padding-bottom: clamp(0.2rem, 1.5vw, 1rem);
+}
+
+#title
+{
+    padding: 20px;
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin-left: 1rem;
+    z-index: 1000;
+    color: white;
+}
+
+/* make hamb-menu disappear on desktop, arranging the appearance*/
+.hamburger-menu
+{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+/* design hamb-menu*/
+.hamburger-menu span
+{
+    width: 2rem;
+    height: 0.4rem;
+    background-color: white;
+    margin: 0.3rem 0;
+}
+
+/* for orientation of nav*/
+nav
+{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-menu
+{
+    display: flex;
+    gap: 1rem;
+    margin-right: 2rem;
+    flex-direction: row;
+}
+
+.nav-menu ul
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* to design the sections text ex. home*/
+.a-nav
+{
+    text-decoration: none;
+    color: white;
+}
+
+/* make dotted disappear */
+ul
+{
+    list-style-type: none;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.home
+{
+    background-color: black;
+    color: white;
+    height: 300vh;
+
+}
+
+
+
+
+
+#welcome
+{
+    margin: 0;
+    padding: 2rem;
+    font-size: clamp(5rem, 7vw, 5.5rem);
+    color: hsl(246, 98%, 77%);
+}
+
+/* make the moon image transparent */
+
+#opening
+{
+    margin: 0;
+    padding: 2rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    width: 60%;
+}
+
+.center
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding-right: 2vw;
+}
+
+.frame
+{
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);  
+    max-width: 70vw;
+    height: auto;
+    flex: 0 0 50vw;
+    
+}
+
+#home-moon
+{
+    opacity: 0.5;
+    margin-left: 0;
+    width: 100%;
+}
+
+
+
+.line 
+{
+    font-size: 1.8rem;         
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    min-width: 0; 
+}
+
+.line.visible 
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#line1
+{
+    margin-right: 0;
+    font-size: clamp(3rem, 5vw, 3.5rem);
+    margin-left: 2rem;
+    color:white;
+}
+
+#introduce
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vw;
+}
+
+.cards
+{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 4rem;
+    margin-top: 10vw;
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+
+.card
+{
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.card:hover
+{
+    transform: scale(1.05);
+    box-shadow:0 0 10px rgb(44, 33, 240);
+}
+
+.card img
+{
+    width: 100%;
+    height: auto;
+}
+
+.card h4
+{
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    color: hsl(247, 9%, 20%);
+}
+
+
+
+.date
+{
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: hsl(247, 9%, 20%);
+}
+
+
+#button2
+{
+    margin-top: 8.8rem;
+}
+
+.btn-outline-primary
+{
+    color: white !important;
+    border-color: #0b3d91 !important;
+    background-color: #0b3d91 !important;
+}
+
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus-visible,
+.btn-outline-primary:active
+{
+    background-color: white !important;
+    border-color: #0b3d91  !important;
+    color: #0b3d91 !important;
+}
+
+
+/* Apollo 15 page */
+#apollo15-pic
+{
+    width: 100vw;
+    height: 40vw;
+    object-fit: cover;
+    filter: brightness(0.5);
+    margin-top: -6rem;
+}
+
+#title-A15
+{
+    position: absolute;
+    
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    text-align: center;
+    margin-top: 20rem;
+    
+    margin-left: 0;
+    padding: 0;
+}
+
+#title2
+{
+    color: #7faefe;
+    font-size: clamp(4rem, 7vw, 5rem);
+    font-weight: bold;
+}
+
+.apollo15-main
+{
+    background-color: rgb(6, 6, 50);
+}
+
+#MBhi
+{
+    margin-top: 10rem;
+    color: white;
+    font-size: clamp(4rem, 7vw, 5rem);
+    text-align: center;
+}
+
+.linesA15
+{
+    font-size: 1.8rem;         
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    min-width: 0; 
+}
+
+.linesA15.visible
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#buggy15
+{
+    display: block;
+    margin: 0 auto;
+    width: clamp(20rem,40vw, 30rem);
+}
+
+#MBhi2
+{
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 10rem;
+}
+
+
+/* Apollo 16 page */
+#apollo16-pic
+{
+    width: 100vw;
+    height: 40vw;
+    object-fit: cover;
+    filter: brightness(0.5);
+    margin-top: -6rem;
+}
+
+
+#title-A16
+{
+    position: absolute;
+    
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    text-align: center;
+    margin-top: 20rem;
+    
+    margin-left: 0;
+    padding: 0;
+}
+
+#title16
+{
+    color: #7faefe;
+    font-size: clamp(4rem, 7vw, 5rem);
+    font-weight: bold;
+}
+
+.apollo16-main
+{
+    background-color: rgb(6, 6, 50);
+}
+
+
+.linesA16
+{
+    font-size: 1.8rem;         
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    min-width: 0; 
+}
+
+.linesA16.visible
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#buggy16
+{
+    display: block;
+    margin: 0 auto;
+    width: clamp(20rem,40vw, 30rem);
+}
+
+
+/* Apollo 17 page */
+#apollo17-pic
+{
+    width: 100vw;
+    height: 40vw;
+    object-fit: cover;
+    filter: brightness(0.5);
+    margin-top: -6rem;
+}
+
+
+#title-A17
+{
+    position: absolute;
+    
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    text-align: center;
+    margin-top: 20rem;
+    
+    margin-left: 0;
+    padding: 0;
+}
+
+#title17
+{
+    color: #7faefe;
+    font-size: clamp(4rem, 7vw, 5rem);
+    font-weight: bold;
+}
+
+.apollo17-main
+{
+    background-color: rgb(6, 6, 50);
+}
+
+
+.linesA17
+{
+    font-size: 1.8rem;         
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    min-width: 0; 
+}
+
+.linesA17.visible
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#buggy17
+{
+    display: block;
+    margin: 0 auto;
+    width: clamp(20rem,40vw, 30rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+.footer
+{
+    background-color: #0b3d91;          /* dark space blue; change to match your page */
+    color: white;
+    padding: 2rem 2rem 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer-content
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;                    /* columns stack on small screens */
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-col
+{
+    flex: 1 1 200px;
+    min-width: 0;
+}
+
+.footer-col h5
+{
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.footer-col ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col a
+{
+    color: #c9cde0;
+    text-decoration: none;
+}
+
+.footer-col a:hover
+{
+    color: #4272f5;
+}
+
+.footer-bottom
+{
+    text-align: center;
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
+}
+
+/* responsive; for phone*/
+@media (max-width: 767px)
+{
+    /* to not overflow*/
+    html, body
+    {
+        overflow-x: clip;
+    }
+
+    body
+    {
+        position: relative;
+    }
+
+    /* for sticky header*/
+    .header
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        position: sticky;
+        top: 0;
+    }
+
+    /* header section: design*/
+    #title
+    {
+        margin-left: 1rem;
+        text-align: left;
+        margin-top: 2rem;
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    #logo-container
+    {
+        display: flex;
+        justify-content: left;
+        margin-left: 0.5rem;
+        width: clamp(1rem, 3vw, 2rem);
+        height: clamp(5rem, 5vw, 10rem);
+        object-fit: contain;
+    }
+
+    /* make hamb-menu appear*/
+    .hamburger-menu
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-self: right;
+    }
+
+    /*make horizontal nav menu to vertical */
+    .nav-menu
+    {
+        display: none;
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color:hsl(246, 100%, 48%);
+        flex-direction: column;
+        padding: 1rem 0;
+        z-index: 1000;
+        font-size: clamp(2rem, 6vw, 3rem);
+        align-items: center;
+    }
+
+    
+
+
+    .a-nav
+    {
+        color: hsl(254, 68%, 95%);
+    }
+
+    a
+    {
+        color: hsl(249, 39%, 90%);
+    }
+
+    .nav-menu.active
+    {
+        display: flex;
+    }
+}
+
+
+/*responsive: for tablets or ipads or book vertical */
+@media only screen and (min-width: 768px) and (max-width: 1400px)
+{
+    html, body
+    {
+        overflow-x: clip;
+    }
+
+    body
+    {
+        position: relative;
+    }
+
+    .header
+    {
+
+        position: sticky;
+        top: 0;
+    }
+
+    .nav-menu
+    {
+        display: flex;
+    }
+}
